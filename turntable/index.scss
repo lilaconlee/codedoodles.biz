@@ -1,0 +1,105 @@
+$record: rgb(32, 32, 32);
+$base: rgb(249, 177, 190);
+$label: rgb(168, 198, 251);
+$background: rgba(32, 32, 32, 0.5);
+
+#outer-container {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container {
+  position: relative;
+  width: 50%;
+}
+
+#container::before {
+  content: "";
+  display: block;
+  padding-top: 75%;
+  width: 100%;
+}
+
+#base {
+  background: $base;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  $pad: 1rem;
+  display: grid;
+  grid-template-columns: $pad 1fr 1fr 1fr 1fr $pad;
+  grid-template-rows: $pad 1fr 1fr 1fr 1fr $pad;
+}
+
+#record {
+  border-radius: 50%;
+  background: $record;
+  grid-column: 2 / span 3;
+  grid-row: 2 / span 4;
+}
+
+#label {
+  $label-size: 10vw;
+
+  background: $label;
+  border-radius: 50%;
+  height: $label-size;
+  width: $label-size;
+}
+
+#center {
+  $center-size: 0.9vw;
+
+  background: $record;
+  border-radius: 50%;
+  height: $center-size;
+  width: $center-size;
+}
+
+#spot {
+  $spot-size: 0.9vw;
+  background: $base;
+  border-radius: 50%;
+  height: $spot-size;
+  width: $spot-size;
+  position: absolute;
+
+}
+
+#arm-container {
+  grid-column: 4 / span 2;
+  grid-row: 2 / span 3;
+
+  // border: 2px solid red;
+}
+
+#arm-line {
+  stroke-width: 4%;
+}
+
+#arm {
+  height: 100%;
+  width: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  background: $background;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
