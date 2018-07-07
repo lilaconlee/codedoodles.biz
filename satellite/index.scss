@@ -2,3 +2,55 @@ html,
 body {
   height: 100%;
 }
+
+#space {
+  height: 100%;
+  position: relative;
+}
+
+#sun {
+  $size: 10vw;
+  background: deeppink;
+  border-radius: 50%;
+  height: $size;
+  width: $size;
+
+  position: absolute;
+}
+
+#planet-orbit {
+  $size: 20vw;
+  height: $size;
+  width: $size;
+
+  position: absolute;
+  -webkit-animation: spin-right 40s linear infinite;
+  animation: spin-right 40s linear infinite;
+}
+
+#planet {
+  $size: 1vw;
+  background: rebeccapurple;
+  border-radius: 50%;
+  height: $size;
+  width: $size;
+
+  position: absolute;
+}
+
+// Thank you https://codepen.io/alandunning/pen/bNNRvQ?editors=1100
+@-webkit-keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
