@@ -1,0 +1,16 @@
+{
+  "name": "codedoodles-two",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "doodle": "./scripts/make-doodle.sh"
+  },
+  "author": "Lila Conlee <lila.conlee@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.9.1",
+    "parcel-bundler": "^1.9.4"
+  }
+}
