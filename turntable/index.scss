@@ -64,13 +64,23 @@ $background: rgba(32, 32, 32, 0.5);
 }
 
 #spot {
-  $spot-size: 0.9vw;
-  background: $base;
+  $spot-size: 0.5vw;
+  background: #fff;
   border-radius: 50%;
   height: $spot-size;
   width: $spot-size;
-  position: absolute;
 
+  position: absolute;
+}
+
+#spot-orbit {
+  $size: 5vw;
+  $speed: 5s;
+  height: $size;
+  width: $size;
+  position: absolute;
+  -webkit-animation: spin-right $speed linear infinite;
+  animation: spin-right $speed linear infinite;
 }
 
 #arm-container {
@@ -87,6 +97,15 @@ $background: rgba(32, 32, 32, 0.5);
 #arm {
   height: 100%;
   width: 100%;
+}
+
+@-webkit-keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 html,
