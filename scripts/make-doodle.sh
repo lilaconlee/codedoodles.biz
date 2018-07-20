@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Usage: npm run doodle <doodle-name>
+
 js="import './index.scss'"
 
 mkdir $1
