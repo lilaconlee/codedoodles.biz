@@ -2,7 +2,7 @@
 
 # Usage: npm run doodle <doodle-name>
 
-js="import './index.scss'"
+js="import './index.scss';"
 
 mkdir $1
 cd $1
